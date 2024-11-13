@@ -1,0 +1,128 @@
+---
+import Nextjsicon from '../components/icons/Nextjsicon.astro'
+import HtmlIcon from '../components/icons/HtmlIcon.astro'
+import Cssicon from '../components/icons/Cssicon.astro'
+import Js from '../components/icons/Js.astro'
+import React from '../components/icons/React.astro'
+import Astroicon from '../components/icons/Astroicon.astro'
+import CssTailwind from '../components/icons/CssTailwind.astro'
+import Vite from '../components/icons/Vite.astro'
+import Node from '../components/icons/Node.astro'
+import Sql from '../components/icons/Sql.astro'
+
+const TAGS={
+
+    NEXT:{
+        name: 'NextJS',
+        class: 'bg-black text-white',
+        icon: Nextjsicon,
+    },
+    HTML:{
+        name: 'Html',
+        class: 'bg-[#D6480B] text-black',
+        icon: HtmlIcon,
+    },
+
+    CSS:{
+        name: 'CSS',
+        class: 'bg-[#1A62B0] text-white',
+        icon: Cssicon,
+    },
+
+    JS:{
+        name: 'Javascript',
+        class: 'bg-[#EFD81C] text-black',
+        icon: Js,
+    },
+    REACT:{
+        name: 'React',
+        class: 'bg-black text-yellow',
+        icon: React,
+    },
+
+    ASTRO:{
+        name: 'Astro',
+        class: 'bg-black text-yellow',
+        icon: Astroicon,
+    },
+
+    TAILWIND:{
+        name: 'TailwindCSS',
+        class: 'bg-black text-yellow',
+        icon: CssTailwind,
+    },
+
+    VITE:{
+        name: 'Vite',
+        class: 'bg-black text-yellow',
+        icon: Vite,
+    },
+    NODE:{
+        name: 'NODEjs',
+        class: 'bg-black text-yellow',
+        icon: Node,
+    },
+
+    SQL:{
+        name: 'SQL',
+        class: 'bg-black text-yellow',
+        icon: Sql,
+    },
+
+
+
+
+
+
+}
+
+const PROJECTOS =[
+    {
+        title: 'Proyecto F1',
+        description: 'Página web básica inspirada en la Fórmula 1, diseñada para ofrecer noticias, calendario de carreras y acceso a merchandising.',
+        link: 'miralo',
+        foto: '../public/img/projectof1.jpg',
+        github: '2',
+        tags:[TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.ASTRO, TAGS.VITE]
+        
+        
+    },
+    {
+        title: 'Proyecto F1 avanzado',
+        description: 'Proyecto realizado para fin de master de desarrollo web, cuenta con una base de datos de pilotos y escuderias, una galeria de imagenes y una sección para comprar asrticulos relaccionados ',
+        link: 'miralo tu',
+        foto: '../public/img/projectof1.jpg',
+        github: '2',
+        tags:[TAGS.NEXT, TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.TAILWIND, TAGS.NODE, TAGS.SQL]  
+    },
+]
+---
+{
+    PROJECTOS.map(({ title, description, link, foto, tags, })=>(
+            <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2" >{title}</h3>
+            <p class="text-lg mb-1 text-pretty">{description}</p>
+            <ul class="flex gap-x-2  pb-1 flex-row">
+                {tags.map((tag)=>(
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full  text-xs ${tag.class} py-1 px-1`}>
+                        <tag.icon class="size-4" /> 
+                        {tag.name}
+                    </span>
+                      
+                    </li>
+                ))}
+            </ul>
+            <img 
+             class="rounded shadow-2xl shadow-white/10 "
+             src={foto} 
+             alt="Captura de mi porjecto">
+           
+            </article>
+    ))
+}
+
+
+            {/* <span class={`flex gap-x-9 rounded-full  text.xs`}>
+            <Nextjsicon class="size-8" /> <HtmlIcon class="size-8"/>  */}
+           
