@@ -1,0 +1,43 @@
+---
+import ExperienciaItem from "./ExperienciaItem.astro"
+
+const EXPERIENCIA =[
+
+
+{
+ date: 'Actualemte . . .',
+ title: 'Proyectos personales y autoaprendizaje',
+ description:'Actualmente, estoy ampliando mis conocimientos en nuevas tecnologías relacionadas con el desarrollo web, como TypeScript, Next.js y Firebase. Paralelamente, estoy desarrollando proyectos personales para consolidar lo aprendido y explorar soluciones innovadoras en el diseño y desarrollo de aplicaciones web.',
+ link: '#'
+
+},
+
+{
+ date: 'Julio 2024',
+ title: 'Master en desarrollo web',
+ description:'Me especialicé en Desarrollo Web, donde trabajé con tecnologías como Node.js, Express, MongoDB, y React. Aprendí a crear aplicaciones web dinámicas y escalables, integrando bases de datos, APIs y servidores. Además, optimicé tanto el backend como la experiencia de usuario en el frontend, aplicando buenas prácticas de desarrollo y seguridad.',
+ link: '#'
+
+},
+
+
+{
+ date: 'Abril 2024',
+ title: 'Master en diseño web',
+ description:'Completé un máster en Diseño Web, donde perfeccioné habilidades avanzadas en HTML5, CSS3 y JavaScript. Diseñé y desarrollé proyectos interactivos, responsivos y centrados en la experiencia del usuario, aplicando buenas prácticas de accesibilidad y rendimiento web.',
+link: '#'
+},
+
+
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3 ">
+    {
+        EXPERIENCIA.map(experiencia=>(
+        <li class="mb-10 ms-4">
+            <ExperienciaItem {...experiencia} />
+        </li>
+        ))
+    }                   
+</ol>
+
