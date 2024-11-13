@@ -25,8 +25,3 @@ Aplicación compleja con Next.js y una base de datos interactiva.
 
 🌐 Visítalo
 
-
-
-
-¿Te gustaría añadir 
-
