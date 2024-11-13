@@ -1,129 +1,141 @@
 ---
-import Nextjsicon from './icons/Nextjsicon.astro'
-import HtmlIcon from './icons/HtmlIcon.astro'
-import Cssicon from './icons/Cssicon.astro'
-import Js from './icons/Js.astro'
-import React from './icons/React.astro'
-import Astroicon from './icons/Astroicon.astro'
-import CssTailwind from './icons/CssTailwind.astro'
-import Vite from './icons/Vite.astro'
-import Node from './icons/Node.astro'
-import Sql from './icons/Sql.astro'
+import Nextjsicon from "./icons/Nextjsicon.astro";
+import HtmlIcon from "./icons/HtmlIcon.astro";
+import Cssicon from "./icons/Cssicon.astro";
+import Js from "./icons/Js.astro";
+import React from "./icons/React.astro";
+import Astroicon from "./icons/Astroicon.astro";
+import CssTailwind from "./icons/CssTailwind.astro";
+import Vite from "./icons/Vite.astro";
+import Node from "./icons/Node.astro";
+import Sql from "./icons/Sql.astro";
+import Github from "./icons/Giticon.astro";
+import Link from "./icons/LinkWeb.astro";
 
+const TAGS = {
+  NEXT: {
+    name: "NextJS",
+    class: "bg-black text-white",
+    icon: Nextjsicon,
+  },
+  HTML: {
+    name: "Html",
+    class: "bg-[#D6480B] text-black",
+    icon: HtmlIcon,
+  },
 
-const TAGS={
+  CSS: {
+    name: "CSS",
+    class: "bg-[#1A62B0] text-white",
+    icon: Cssicon,
+  },
 
-    NEXT:{
-        name: 'NextJS',
-        class: 'bg-black text-white',
-        icon: Nextjsicon,
-    },
-    HTML:{
-        name: 'Html',
-        class: 'bg-[#D6480B] text-black',
-        icon: HtmlIcon,
-    },
+  JS: {
+    name: "Javascript",
+    class: "bg-[#EFD81C] text-black",
+    icon: Js,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-black text-yellow",
+    icon: React,
+  },
 
-    CSS:{
-        name: 'CSS',
-        class: 'bg-[#1A62B0] text-white',
-        icon: Cssicon,
-    },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-yellow",
+    icon: Astroicon,
+  },
 
-    JS:{
-        name: 'Javascript',
-        class: 'bg-[#EFD81C] text-black',
-        icon: Js,
-    },
-    REACT:{
-        name: 'React',
-        class: 'bg-black text-yellow',
-        icon: React,
-    },
+  TAILWIND: {
+    name: "TailwindCSS",
+    class: "bg-black text-yellow",
+    icon: CssTailwind,
+  },
 
-    ASTRO:{
-        name: 'Astro',
-        class: 'bg-black text-yellow',
-        icon: Astroicon,
-    },
+  VITE: {
+    name: "Vite",
+    class: "bg-black text-yellow",
+    icon: Vite,
+  },
+  NODE: {
+    name: "NODEjs",
+    class: "bg-black text-yellow",
+    icon: Node,
+  },
 
-    TAILWIND:{
-        name: 'TailwindCSS',
-        class: 'bg-black text-yellow',
-        icon: CssTailwind,
-    },
+  SQL: {
+    name: "SQL",
+    class: "bg-black text-yellow",
+    icon: Sql,
+  },
+};
 
-    VITE:{
-        name: 'Vite',
-        class: 'bg-black text-yellow',
-        icon: Vite,
-    },
-    NODE:{
-        name: 'NODEjs',
-        class: 'bg-black text-yellow',
-        icon: Node,
-    },
-
-    SQL:{
-        name: 'SQL',
-        class: 'bg-black text-yellow',
-        icon: Sql,
-    },
-
-
-
-
-
-
-}
-
-const PROJECTOS =[
-    {
-        title: 'Proyecto F1',
-        description: 'Página web básica inspirada en la Fórmula 1, diseñada para ofrecer noticias, calendario de carreras y acceso a merchandising.',
-        link: 'miralo',
-        foto: 'https://i.ibb.co/z6YscBd/IMG-20241113-070254.jpg',
-        github: '2',
-        tags:[TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.ASTRO, TAGS.VITE]
-        
-        
-    },
-    {
-        title: 'Proyecto F1 avanzado',
-        description: 'Proyecto realizado para fin de master de desarrollo web, cuenta con una base de datos de pilotos y escuderias, una galeria de imagenes y una sección para comprar asrticulos relaccionados ',
-        link: 'miralo tu',
-        foto: 'https://i.ibb.co/Fn9wWLV/IMG-20241113-070331.jpg',
-        github: '2',
-        tags:[TAGS.NEXT, TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.TAILWIND, TAGS.NODE, TAGS.SQL]  
-    },
-]
+const PROJECTOS = [
+  {
+    title: "Proyecto F1",
+    description:
+      "Página web básica inspirada en la Fórmula 1, diseñada para ofrecer noticias, calendario de carreras y acceso a merchandising.",
+    link: "https://f1proyect.netlify.app/",
+    foto: "https://i.ibb.co/Kzk1XKB/frame1shots.png",
+    github: "https://github.com/Oquismo/Proyecto-Formula-1-FE",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
+  },
+  {
+    title: "Proyecto F1 avanzado",
+    description:
+      "Proyecto realizado para fin de master de desarrollo web, cuenta con una base de datos de pilotos y escuderias, una galeria de imagenes y una sección para comprar asrticulos relaccionados ",
+    link: "https://www.projectlonsu.com/",
+    foto: "https://i.ibb.co/3sLXp35/frame2.png",
+    github: "https://github.com/Oquismo/subir_nano",
+    tags: [
+      TAGS.NODE,
+      TAGS.VITE,
+      TAGS.REACT,
+      TAGS.JS,
+      TAGS.NEXT,
+      TAGS.HTML,
+      TAGS.CSS,
+    ],
+  },
+];
 ---
+
 {
-    PROJECTOS.map(({ title, description, link, foto, tags, })=>(
-            <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2" >{title}</h3>
-            <p class="text-lg mb-1 text-pretty">{description}</p>
-            <ul class="flex gap-x-2  pb-1 flex-row">
-                {tags.map((tag)=>(
-                    <li>
-                        <span class={`flex gap-x-2 rounded-full  text-xs ${tag.class} py-1 px-1`}>
-                        <tag.icon class="size-4" /> 
-                        {tag.name}
-                    </span>
-                      
-                    </li>
-                ))}
-            </ul>
-            <img 
-             class="rounded shadow-2xl shadow-white/10 "
-             src={foto} 
-             alt="Captura de mi porjecto">
-           
-            </article>
-    ))
+  PROJECTOS.map(({ title, github, description, link, foto, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-1 text-pretty">{description}</p>
+      <span class="flex gap-x-2 rounded-full  text-xs py-1 px-1">
+        <a href={github}>
+          <Github class="size-6 mb-2" />
+        </a>
+        <a href={link}>
+          <Link class="size-6 mb-2" />
+        </a>
+      </span>
+      <ul class="flex gap-x-2  pb-1 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full  text-xs ${tag.class} py-1 px-1`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10 "
+        src={foto}
+        alt="Captura de mi porjecto"
+      />
+    </article>
+  ))
 }
 
-
-            {/* <span class={`flex gap-x-9 rounded-full  text.xs`}>
-            <Nextjsicon class="size-8" /> <HtmlIcon class="size-8"/>  */}
-           
+{
+  /* <span class={`flex gap-x-9 rounded-full  text.xs`}>
+            <Nextjsicon class="size-8" /> <HtmlIcon class="size-8"/>  */
+}
