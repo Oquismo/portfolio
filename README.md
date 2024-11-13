@@ -25,10 +25,8 @@ Aplicación compleja con Next.js y una base de datos interactiva.
 
 🌐 Visítalo
 
-Portafolio en Vercel
 
 
----
 
-¿Te gustaría añadir algo más?
+¿Te gustaría añadir 
 
