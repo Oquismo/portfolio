@@ -10,6 +10,8 @@ import Experiencia from "../components/Experiencia.astro";
 import ExperienciaIcon from "../components/icons/ExperienciaIcon.astro";
 import CodeIcono from "../components/icons/CodeIcono.astro";
 import Projectos from "../components/Projectos.astro";
+import Conocimientos from "../components/icons/conocimientos.astro";
+import ConocimientosPage from '../components/ConocimientosPage.astro';
 ---
 
 <Layout title="Portfolio Stefano Rovetta - Desarrollador y Programador web ">
@@ -76,9 +78,10 @@ import Projectos from "../components/Projectos.astro";
       <h2
         class="text-2xl font-semibold mb-6 flex justify-start gap-x-2 items-center"
       >
-        <CodeIcono class="size-6 flex" />
+        <Conocimientos class="size-6 flex" />
         conocimientos
       </h2>
+      <ConocimientosPage/>
     </Seccion>
   </main>
 </Layout>
