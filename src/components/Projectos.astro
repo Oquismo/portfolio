@@ -99,25 +99,15 @@ const PROJECTOS = [
     ],
   },
 
-
-  {
-    title: "Portfolio",
-    description:
-      "Portfolio personal para mostrar mis conocimientos y aptitudes asi como los proyectos que he realizado y estoy realizando",
-    link: "/",
-    foto: "https://i.ibb.co/rxnqrYV/533shots-so.png",
-    github: "https://github.com/Oquismo/portfolio",
-    tags: [
-      TAGS.HTML,
-      TAGS.TAILWIND,
-      TAGS.ASTRO,
-      TAGS.JS,
-    ],
-  },
-
-
-
-
+  // {
+  //   title: "Portfolio",
+  //   description:
+  //     "Portfolio personal para mostrar mis conocimientos y aptitudes asi como los proyectos que he realizado y estoy realizando",
+  //   link: "/",
+  //   foto: "https://i.ibb.co/rxnqrYV/533shots-so.png",
+  //   github: "https://github.com/Oquismo/portfolio",
+  //   tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.ASTRO, TAGS.JS],
+  // },
 ];
 ---
 
@@ -147,7 +137,14 @@ const PROJECTOS = [
         ))}
       </ul>
       <img
-        class="rounded shadow-2xl shadow-white/10 "
+        class=" hover:scale-95
+    hover:shadow-lg
+    rounded
+    shadow-2xl
+    shadow-white/10
+    transition-all
+    ease-in-out
+    duration-300 "
         src={foto}
         alt="Captura de mi porjecto"
       />
