@@ -1,5 +1,23 @@
+---
+// Badge.astro
+---
+
+<style>
+  .animated-border {
+    animation: borderColor 2s ease-in-out infinite;
+  }
+
+  @keyframes borderColor {
+    0% { border-color: #883030; }
+    33% { border-color: #d41d1d; }
+    66% { border-color: #ff0000; }
+    100% { border-color: #ff0000; }
+  }
+</style>
+
 <span
-  class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300"
-  ><slot />
-  </span
+  class="bg-green-600 text-black text-xs font-medium me-2 px-2 py-0.5 rounded dark:bg-green-600 dark:text-black border-[2px] animated-border"
+>
+  <slot />
+</span>
 
