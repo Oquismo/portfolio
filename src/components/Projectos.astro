@@ -11,6 +11,7 @@ import Node from "./icons/Node.astro";
 import Sql from "./icons/Sql.astro";
 import Github from "./icons/Giticon.astro";
 import Link from "./icons/LinkWeb.astro";
+import Supabase from "./icons/Supabase.astro";
 
 const TAGS = {
   NEXT: {
@@ -69,9 +70,34 @@ const TAGS = {
     class: "bg-black text-yellow",
     icon: Sql,
   },
+  SUPABASE: {
+  name: "SUPABASE",
+    class: "bg-black text-yellow",
+    icon: Supabase,
+  },
 };
 
 const PROJECTOS = [
+
+
+
+{
+    title: "ClonEquis",
+    description:
+      "Un clon sencillo de la red social X (Twitter) que permite a los usuarios hacer login escribir tweets y ver las publicaciones de otros usuarios así como eliminar las suyas",
+    link: "https://clon-equis.vercel.app/",
+    foto: "https://i.imgur.com/Dgt4DHY.png",
+    github: "https://github.com/Oquismo/ClonEquis",
+    tags: [
+      TAGS.REACT,
+      TAGS.JS,
+      TAGS.TAILWIND,
+      TAGS.SUPABASE,
+      TAGS.SQL
+    ],
+  },
+
+
 
 
 {
