@@ -3,22 +3,100 @@ import Header from '../components/Header.astro';
 import '@fontsource-variable/onest';
 import Footer from '../components/Footer.astro';
 
-
 interface Props {
 	title: string;
+	description?: string;
+	keywords?: string;
+	ogImage?: string;
 }
 
-const { title } = Astro.props;
+const { 
+	title, 
+	description = "Portfolio de Stefano Rovetta - Desarrollador Web especializado en React, Next.js, Node.js. Creando soluciones web modernas y escalables en Sevilla, España.",
+	keywords = "Stefano Rovetta, desarrollador web, programador, React, Next.js, Node.js, portfolio, Sevilla, España, frontend, backend, JavaScript, TypeScript",
+	ogImage = "https://iili.io/2aCQ3Tx.md.jpg"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="Stefano Rovetta" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:site_name" content="Stefano Rovetta - Portfolio" />
+		<meta property="og:locale" content="es_ES" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImage} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Favicon and Icons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		
+		<!-- Generator -->
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Stefano Rovetta",
+			"jobTitle": "Desarrollador Web",
+			"description": "Desarrollador web especializado en React, Next.js y Node.js, creando soluciones modernas y escalables",
+			"url": "https://portfolio-stefano-zeta.vercel.app",
+			"image": "https://iili.io/2aCQ3Tx.md.jpg",
+			"sameAs": [
+				"https://www.linkedin.com/in/srovettaterr%C3%B3n/",
+				"https://github.com/Oquismo"
+			],
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Sevilla",
+				"addressCountry": "España"
+			},
+			"knowsAbout": [
+				"Desarrollo Web",
+				"React",
+				"Next.js",
+				"Node.js",
+				"JavaScript",
+				"TypeScript",
+				"HTML",
+				"CSS",
+				"TailwindCSS",
+				"MongoDB",
+				"SQL",
+				"Firebase"
+			],
+			"alumniOf": {
+				"@type": "EducationalOrganization",
+				"name": "Master en Desarrollo Web"
+			},
+			"email": "rovetta215@gmail.com"
+		}
+		</script>
+		
 		<title>{title}</title>
 	</head>
 	<body class=" relative text-white dark:text-white">
